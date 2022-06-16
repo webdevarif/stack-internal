@@ -1,0 +1,179 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700;800&display=swap');
+
+// Button Contrast
+$min-contrast-ratio: 1;
+
+// OTHER COLORS
+$white:    #fff !default;
+$gray-100: #f8f8fa !default;
+$gray-200: #e9e8ed!default;
+$gray-300: #D4D6DE !default;
+$gray-400: #ced4da !default;
+$gray-500: #a3a5ad !default;
+$gray-600: #6c757d !default;
+$gray-700: #5E5E5E !default;
+$gray-800: #343a40 !default;
+$gray-900: #111111 !default; // #212529 ;
+$black:    #000 !default;
+
+// COLORS
+$primary: #031DC7;
+$danger: #C22E00;
+$success: #00664D;
+$secondary: #a4a5ad;
+$warning: #F7BE00;
+$dark:$gray-900;
+
+// FONT SIZES
+$fs-xs:    13px;
+$fs-sm:   16px;
+$fs-md:   18px;
+$fs-lg:      20px;
+$fs-xl:      22px;
+$fs-2xl:    26px;
+$fs-3xl:    30px;
+$fs-4xl:    40px;
+$fs-5xl:    50px;
+$fs-6xl:    60px;
+
+// SIZES LIST
+$sizes-list : (
+  "xs": $fs-xs,
+  "sm": $fs-sm,
+  "md": $fs-md,
+  "lg": $fs-lg,
+  "xl": $fs-xl,
+  "2xl": $fs-2xl,
+  "3xl": $fs-3xl,
+  "4xl": $fs-4xl,
+  "5xl": $fs-5xl,
+  "6xl": $fs-6xl,
+) !default;
+
+
+// Spacers List
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2.5,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+  11: $spacer * 9,
+  12: $spacer * 10,
+) !default;
+
+// ZINDEX
+$zindex-negative: -1;
+$zindex-elevate: 1;
+
+$variable-prefix: bs- !default;
+
+// FONT FAMILY
+$ff-primary: 'Barlow', sans-serif;
+$ff-secondary:$ff-primary;
+$ff-roboto: 'Roboto', sans-serif;
+$ff-fa: "Font Awesome 5 Pro";
+
+// FONT FAMILY LIST
+$ff-list: (
+  'primary': $ff-primary,
+  'secondary': $ff-secondary,
+  'roboto': $ff-roboto,
+  'fa': $ff-fa,
+) !default;
+
+
+
+// CUSTOMIZATION BOOTSTRAP
+// -----------------------
+
+
+// CONTAINER
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1410px,
+);
+// DISPLAY FONT SIZES
+$display-font-sizes: (
+  1: 7rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+
+// NAVBAR
+$navbar-dark-color: $white;
+$navbar-light-color:  $gray-500;
+$navbar-nav-link-padding-x: 1rem;
+
+// HR
+$hr-opacity: 1;
+
+
+// Border Radius
+$border-radius: 0.25rem;
+$border-radius-lg: 1.5rem;
+
+$border-color: $gray-200;
+
+// Text Color
+$text-muted: $gray-500;
+
+// Accordion
+$accordion-button-active-bg:inherit;
+$accordion-button-active-color:inherit;
+$accordion-button-focus-box-shadow: none;
+
+// Card
+$card-border-color: transparent;
+$card-border-radius: 0.25rem;
+
+// Button
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 2rem;
+
+// Table
+$table-cell-padding-y: 1rem;
+$table-striped-bg: $gray-100;
+
+// Box Shadow
+$box-shadow-lg: 7.5px 12.99px 30px 0px rgba($dark, 0.1);
+
+// Check Box 
+$form-check-input-width: 1.4em;
+$form-check-input-border: 1px solid $border-color;
+$form-check-input-border-radius: 0.25rem;
+$form-check-label-color: $gray-900;
+$form-check-label-cursor: pointer;
+
+$navbar-nav-link-padding-x: 0.75rem;
+
+// Form Control
+$input-border-radius-lg: 0.25rem;
+$input-border-color: $border-color;
+$input-padding-y: .75rem;
+$input-padding-x: 1.5rem;
+$input-placeholder-color: #858585;
+
+
+// Dropdown
+$dropdown-border-color: $border-color;
+
+// Offcanvas
+$offcanvas-horizontal-width: 100%;
+$offcanvas-bg-color: transparent;
+$offcanvas-border-width: 0;

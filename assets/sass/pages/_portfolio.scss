@@ -1,0 +1,197 @@
+// portfolio section style
+
+.portfolio-section {
+    .portfolio-shorting {
+        display: flex;
+        align-items: center;
+        .nice-select {
+            border-color: transparent;
+            height: 50px;
+            line-height: 50px;
+            color: #000;
+            width: 200px;
+            &:first-child {
+                margin-right: 50px;
+            }
+        }
+    }
+    .project-view-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        h5 {
+            margin-bottom: 0;
+        }
+        .project-view-cat {
+            img {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    .portfolio-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+        .single-portfolio {
+            min-height: 480px;
+            background-size: cover!important;
+            border-bottom: 2px solid #F7BE00;
+            position: relative;
+            z-index: 1;
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                content: "";
+                background: #000;
+                opacity: .3;
+                z-index: -1;
+            }
+            h3 {
+                font-size: 30px;
+                padding-top: 30px;
+                padding-left: 40px;
+                font-weight: 600;
+            }
+            .portfolio-desc {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 0 40px 30px;
+                display: flex;
+                justify-content: space-between;
+                .left-desc {
+                    h6 {
+                        font-family: $ff-primary;
+                        font-size: 20px;
+                        span {
+                            min-width: 35px;
+                            width: 35px;
+                            display: inline-block;
+                        }
+                    }
+                }
+                .portfolio-link {
+                    height: 54px;
+                    width: 54px;
+                    border: 2px solid #FFFFFF;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: #fff;
+                    font-size: 20px;
+                    &:hover {
+                        background: $warning;
+                    }
+                }
+            }
+        }
+    }
+    .learn-more-block {
+        padding-top: 80px;
+        p {
+            line-height: 1.5;
+        }
+    }
+}
+
+
+.big-bg-area {
+    height: 1000px;
+    position: relative;
+    z-index: 1;
+    background-size: cover!important;
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: #000;
+        opacity: .2;
+    }
+}
+
+
+// media-box style
+.media-box {
+    .media-content {
+        border-top: 1px solid $warning;
+        padding-top: 20px;
+        h3 {
+            line-height: 1.2;
+        }
+        p {
+            line-height: 1.3;
+        }
+        .styled-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                font-family: $ff-primary;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 16px;
+                i {
+                    margin-right: 5px;
+                    color: $warning;
+                }
+            }
+        }
+    }
+    .list-table {
+        border-top: 1px solid #888888;
+        margin-top: 100px;
+        .single-list-table {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            border-bottom: 1px solid #888888;
+            padding: 15px 0;
+        }
+    }
+} 
+
+.text-media {
+    margin-top: 100px;
+    p {
+        line-height: 1.4;
+    }
+}
+
+.single-step {
+    h5 {
+        font-family: $ff-primary;
+        font-size: 22px;
+        border-bottom: 1px solid #888888;
+    }
+    p {
+        line-height: 1.4;
+    }
+}
+
+.team-social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        a {
+            &:hover {
+                color: $warning!important;
+            }
+        }
+    }
+}

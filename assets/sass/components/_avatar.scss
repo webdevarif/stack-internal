@@ -1,0 +1,52 @@
+
+$avatar-sizes-list: (
+    "xxs": 1.5rem,
+    "xs": 2rem,
+    "sm": 2.5rem,
+    "md": 4.5rem,
+    "lg": 6rem,
+    "xl": 7.5rem,
+
+) !default;
+
+.avatar{
+    @each $size, $value in $avatar-sizes-list {
+        &-#{$size}{ 
+            height: var(--avatar-size, $value) !important;
+            min-width: var(--avatar-size, $value) !important;
+            width: var(--avatar-size, $value) !important;
+        }
+    }
+}
+
+
+
+$objFit-list: (
+    "cover": "cover",
+    "contain": "contain",
+)!default;
+
+$objPosition-list: (
+    "center": "center",
+    "left": "left",
+)!default;
+
+.obj{
+    
+    @each $name, $value in $objFit-list {
+        &-#{$name}{
+            object-fit: cover;
+        }
+    }
+    @each $name, $value in $objPosition-list {
+        &-#{$name}{
+            object-position: center;
+        }
+    }
+}
+
+
+.bg-image{
+    background-position: center;
+    background-size: cover;
+}

@@ -1,0 +1,123 @@
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: var(--heading-color, $white)
+}
+
+h1, h2, h3, h4{
+  font-weight: var(--heading-fw, 600);
+}
+
+h1 {
+  font-size: var(--#{$variable-prefix}font-size, $fs-4xl);
+
+  // @include media-breakpoint-up(xl) {
+  //   --#{$variable-prefix}font-size: #{$fs-6xl};
+  // }
+}
+
+.h1 {
+  @include media-breakpoint-up(xl) {
+    --#{$variable-prefix}font-size: #{$fs-6xl};
+  }
+}
+
+h2{
+  font-size: var(--#{$variable-prefix}font-size, $fs-3xl);
+
+  // @include media-breakpoint-up(xl) {
+  //   --#{$variable-prefix}font-size: #{$fs-4xl};
+  // }
+}
+
+.h2 {
+  --#{$variable-prefix}font-size : #{$fs-3xl};
+}
+
+h3 {
+  font-size: var(--#{$variable-prefix}font-size, $fs-2xl);
+  line-height: var(--heading-lh, 1.5);
+
+  // @include media-breakpoint-up(xl) {
+  //   --#{$variable-prefix}font-size: #{$fs-3xl};
+  // }
+}
+
+.h3 {
+  --#{$variable-prefix}font-size : #{$fs-2xl};
+  --heading-lh: 1.5;
+}
+
+h4 {
+  font-size: var(--#{$variable-prefix}font-size, $fs-lg);
+  line-height: var(--heading-lh, 1.5);
+
+  // @include media-breakpoint-up(xl) {
+  //   --#{$variable-prefix}font-size: #{$fs-2xl};
+  // }
+}
+
+.h4 {
+  --#{$variable-prefix}font-size: #{$fs-lg};
+  --heading-lh: 1.5;
+}
+
+h5 {
+  font-size: var(--#{$variable-prefix}font-size, $fs-xl);
+  line-height: var(--heading-lh, 1.5);
+}
+
+.h5 {
+  --#{$variable-prefix}font-size: #{$fs-xl};
+  --heading-lh: 1.5;
+}
+
+h6 {
+  font-size: var(--#{$variable-prefix}font-size, $fs-lg);
+  line-height: var(--heading-lh, 1.5);
+}
+
+.h6 {
+  --#{$variable-prefix}font-size : #{$fs-lg};
+  --heading-lh: 1.5;
+}
+
+
+// FONT Family
+@each $font,
+$family in $ff-list {
+  .ff-#{$font} {
+    font-family: $family !important;
+  }
+}
+
+
+// LINE HEIGHT
+@each $key, $value in ('xs': 1, 'sm': 1.2, 'md':1.4, 'lg':1.8, 'xl':2, '2xl': 2.3, '3xl': 2.5) {
+  .lh-#{$key} {
+    line-height: $value !important;
+  }
+}
+
+// // LETTER SPACING
+@each $key, $value in ('xs': 1.5px, 'sm': 0.03em, 'md':0.07em, 'lg':0.1em, 'xl':0.13em, '2xl': 0.16em, '3xl': 0.2em) {
+  .ls-#{$key} {
+    letter-spacing: $value !important;
+  }
+}
+
+@mixin make-custom-styles($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+      // Font Sizes
+      @each $key, $value in $sizes-list {
+        .fs#{$infix}-#{$key} {
+          font-size: var(--#{$variable-prefix}font-size, #{$value}) !important;
+        }
+      }
+    }
+  }
+}
+
+@include make-custom-styles();

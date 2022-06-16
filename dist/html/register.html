@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <!-- Custom Files -->
+  <link rel="stylesheet" href="../assets/css/aos.css">
+  <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/vendor/bootstrap.min.js"></script>
+  <script src="../assets/js/vendor/popper.min.js"></script>
+</head>
+
+<body>
+  <!-- 01 // Header Start -->
+  <header class="header position-fixed top-0 start-0 end-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-light py-lg-2">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="../assets/images/logo.png" alt="">
+        </a>
+        <div class="d-lg-none d-inline-flex">
+          <!-- Toggle Button -->
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <!-- User Button -->
+              <div class="nav-item dropdown position-relative">
+                <a class="nav-link d-flex align-items-center px-1" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <h6 class="mb-0 me-3 fs-sm fs-md-md">Jhon</h6>
+                  <img src="../assets/images/user.png" class="avatar-sm" alt="">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-end position-absolute"
+                  aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <button class="navbar-toggler shadow-none px-0 border-0 ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>              
+            </li>
+          </ul>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Message</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Template Admin</a>
+            </li>
+            <li class="nav-item dropdown d-none d-lg-inline-flex">
+              <a class="nav-link d-flex align-items-center py-0" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <h6 class="mb-0 me-3">Jhon</h6>
+                <img src="../assets/images/user.png" class="avatar-sm" alt="">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-end animate slideIn"
+                aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- 01 // Header End -->
+
+  <!-- Account Page -->
+  <div class="account-page">
+    <div class="container">
+      <div class="row account-page-row justify-content-center">
+        <div class="col-xl-10">
+          <div class="card bg-light shadow-sm">
+            <div class="row g-0">
+              <div class="col-xl-5 col-lg-6">
+                <div class="bg-danger h-100 position-relative">
+                  <img src="../assets/images/auth-banner.png" class="h-100 w-100 obj-center obj-cover" alt="">
+                  <a href="#" class="position-absolute top-50 start-50 translate-middle text-white z-40 fs-2xl fs-md-4xl">
+                    <i class="fa fa-play"></i>
+                  </a>
+
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-6 order-lg-first">
+                <div class="card-body p-lg-5">
+                  <!-- Page Heading -->
+                  <div class="page-heading mb-3 text-center">
+                    <div class="mb-2">
+                      <img src="../assets/images/logo.png" height="40" alt="">
+                    </div>
+                    <h4>Sign Up</h4>
+                  </div>
+                  <!-- Form -->
+
+                  <form action="#">
+                    <!-- Single Form Field -->
+                    <div class="form-group mb-3">
+                      <input type="text" class="form-control pe-lg-5" id="label--password" placeholder="Email/Username">
+                    </div>
+                    <!-- Single Form Field -->
+                    <div class="form-group mb-3 position-relative">
+                      <input type="password" class="form-control pe-lg-5" placeholder="Password">
+                      <!-- Show Password Action -->
+                      <button type="button" class="btn btn-sm position-absolute end-0 top-50 me-2 translate-middle-y fal fa-eye"></button>
+                    </div>
+                    <!-- Single Form Field -->
+                    <div class="form-group mb-3 position-relative">
+                      <input type="password" class="form-control pe-lg-5" placeholder="Password Again">
+                      <!-- Show Password Action -->
+                      <button type="button" class="btn btn-sm position-absolute end-0 top-50 me-2 translate-middle-y fal fa-eye"></button>
+                    </div>
+
+                    <div class="form-check mb-5">
+                      <input class="form-check-input" type="checkbox" value="" id="label-agree-terms-conditions">
+                      <label class="form-check-label" for="label-agree-terms-conditions">
+                        I agree to the <a href="#" class="text-decoration-underline">Terms of Service</a> and <a href="#" class="text-decoration-underline">Privacy Policy</a>
+                      </label>
+                    </div>
+
+                      <div class="button-area">
+                        <div class="btn-toolbar align-items-center gap-3 flex-nowrap" role="toolbar" aria-label="Toolbar with button groups">
+                          <div class="btn-group" role="group" aria-label="First group">
+                            <button type="submit" class="btn btn-primary text-nowrap">Sign Up</button>
+                          </div>
+                          <div class="btn-group" role="group" aria-label="Second group">
+                            <span class="fs-lg text-dark">or</span>
+                          </div>
+                          <a href="#" class="btn-group" role="group" aria-label="Third group">
+                            <img src="../assets/images/google-icon.svg" style="min-width: 35px" alt="">
+                          </a>
+                        </div>
+                    </div>
+                  </form>
+
+                  <div class="br-2 mt-5 mb-4">
+                    <h6 class="mb-0">Already a Member?</h6>
+                  </div>
+
+                  <div class="extra text-center">
+                    <a href="#" class="btn btn-outline-primary">Sign In</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

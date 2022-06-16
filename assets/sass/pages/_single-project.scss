@@ -1,0 +1,12 @@
+.single-project-slider{
+    .single-slider-item{
+        padding: 1.5rem;
+        display: flex;
+        align-items: flex-end;
+        min-height: var(--single-slider-item-height, 50vh);
+
+        @include media-breakpoint-up(lg){
+            --single-slider-item-height: 70vh;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.header-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  --bs-nav-link-font-size: #{$fs-lg};
+  --bs-nav-link-font-weight: 300;
+  background: transparent;
+  transition: background 0.3s ease-in;
+  .navbar-dark {
+    @include media-breakpoint-down(lg) {
+      background-color: $dark;
+    }
+  }
+
+  .navbar-brand img{
+    width: auto;
+    height: var(--navbar-brand-height, 70px);
+    transition: all 0.3s ease-in;
+    @include media-breakpoint-up(lg){
+      --navbar-brand-height: 120px;
+    }
+  }
+
+  &-toggler {
+    background-color: transparent;
+    border: 0;
+    color: $light;
+    font-size: $fs-3xl;
+    line-height: 100%;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+}
+
+
+.sticky-menu {
+  background: $dark;
+  border-bottom: 1px solid rgba($gray-800, 0.3);
+
+  .navbar-brand img{
+    --navbar-brand-height: 50px;
+
+    @include media-breakpoint-up(lg){
+      --navbar-brand-height: 70px;
+    }
+  }
+}

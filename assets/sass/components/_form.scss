@@ -1,0 +1,90 @@
+.nice-select{
+    border-color: $border-color;
+    height: 64px;
+    line-height: 62px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 600;
+    color: $gray-500;
+
+    &.open{
+        box-shadow: $box-shadow-lg;
+        background-color: $white;
+        border-color: transparent;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .list{
+        width: 100%;
+        border-radius: 0;
+        border-width: 0;
+        box-shadow: $box-shadow-lg;
+
+        // option selected focus
+
+        .option{
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+
+            &.selected, &:hover, &:focus{
+                background-color: #ecf9fe;
+                color: $primary;
+            }
+        }
+    }
+
+    &:after{
+        @include arrow(down, 0.31rem, #b9bcc3);
+        border-bottom: unset;
+        transform: rotate(0deg);
+        margin-top: -2px;
+        right: 1.5rem;
+    }
+    &.open:after {
+        transform: rotate(-180deg);
+        margin-top: -4px;
+    }
+}
+
+.form-b-group{
+    border: 1px solid $border-color;
+    padding: .75rem 1.5rem;
+    border-radius: $border-radius-sm;
+    margin-bottom: 1rem;
+    position: relative;
+
+    label{
+        text-transform: uppercase;
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .form-control{
+        border: 0;
+        padding: 0;
+        padding-right: 2rem;
+        outline: 0;
+        font-weight: 600;
+        box-shadow: none;
+
+        &:disabled, &:read-only{
+            background: transparent;
+        }
+    }
+
+    .form-badge{
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
+    }
+}
+
+// Form Check
+.form-check{
+
+    label{
+        font-weight: 600;
+    }
+}

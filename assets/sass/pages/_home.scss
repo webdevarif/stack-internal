@@ -1,0 +1,108 @@
+.section-hero{
+    $b: 2.5em; // border-width
+    $blur: blur(9px);
+    position: relative;
+    
+
+    .single-swiper{
+        min-height: var(--section-hero-height, 60vh);
+        background-color: $light;
+        background-position: center;
+        background-size: cover;
+        font-size: 2em;
+        transform: var(--single-swipe--transform, scale(1.05));
+        transition: transform 2s ease-in;
+
+        @include media-breakpoint-up(md){
+            --section-hero-height: 100vh;
+        }
+    }
+
+    
+    .section-hero--title{
+        opacity:0
+    }
+
+    .swiper-slide-active{
+        --single-swipe--transform: scale(1);
+
+        .section-hero--title{
+            -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+            animation: 3s ease 0s normal forwards 1 fadein;
+        }
+
+    }
+}
+
+
+@keyframes fadein{
+    0% { 
+        opacity:0; 
+        transform: translateX(100px);
+    }
+    66% { 
+        opacity:0; 
+        transform: translateX(100px);
+    }
+    100% { 
+        opacity:1; 
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes fadein{
+    0% { 
+        opacity:0; 
+        transform: translateX(100px);
+    }
+    66% { 
+        opacity:0; 
+        transform: translateX(100px);
+    }
+    100% { 
+        opacity:1; 
+        transform: translateX(0px);
+    }
+}
+
+/* Full Slider Area */
+.section-services-area{
+    position: relative;
+
+    .swiper-slide .single-item{
+        min-height: var(--section-services-item-height, 45vh);
+        
+        @include media-breakpoint-up(xl){
+            --section-services-item-height: 690px;
+        }
+    }
+} 
+
+.services-slider-area{
+    .swiper-slide .single-item{
+        min-height: var(--section-full-slider-item-height, 45vh);
+        
+        @include media-breakpoint-up(xl){
+            --section-full-slider-item-height: 60vh;
+        }
+    }
+}
+
+
+.single-slider-item-height{
+    min-height: var(--section-full-slider-item-height, 45vh);
+    
+    @include media-breakpoint-up(xl){
+        --section-full-slider-item-height: var(--item-height, 60vh);
+    }
+}
+
+
+.section-our-services .services-row{
+    @include media-breakpoint-up(xxl){
+        padding-left: 13.33%;
+    }
+    @include media-breakpoint-between(xl, xxl){
+        padding-left: 8.33%;
+    }
+}

@@ -1,0 +1,105 @@
+body{
+    &.open-offcanvas{
+        --stack-offcanvas-p-left: 0;
+        --stack-offcanvas-opacity: 1;
+        --stack-offcanvas-pointer-event: all;
+        overflow: hidden;
+        
+        // Header
+        .header-area .navbar-brand{
+            min-width: 300px;
+            width: 15vw;
+        }
+
+        .stack-offcanvas__menu li{
+            opacity: 0;
+            -webkit-animation: 0.5s ease 0s normal forwards 1 LinkSlide;
+            animation: 0.5s ease 0s normal forwards 1 LinkSlide;
+        }
+    }
+    
+    // Barger
+    &.open-offcanvas .header-area-toggler .fa-bars,
+    &:not(.open-offcanvas) .header-area-toggler .fa-times{
+        display: none;
+    }
+}
+
+
+.stack-offcanvas{
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    position: fixed;
+    top: 0;
+    left: var(--stack-offcanvas-p-left, -30vh);
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    opacity: var(--stack-offcanvas-opacity, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter:blur(20px);
+    -o-backdrop-filter:blur(20px);
+    -ms-backdrop-filter:blur(20px);
+    -moz-backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    transition: all 0.2s ease-in-out;
+    overflow-x: hidden;
+    pointer-events: var(--stack-offcanvas-pointer-event, none);
+
+    &__menu li{
+        position: relative;
+
+        @for $i from 1 through 10 {
+            &:nth-child(#{$i}) { 
+                animation-delay: ($i * 0.25) + s !important;
+            } 
+        }
+
+        a{
+            color: var(--stack-offcanvas-menu-link-color, $white);
+            font-size: var(--stack-offcanvas-menu-link-fs, 20px);
+            font-weight: 300;
+            line-height: 2;
+    
+            &.active, &:hover{
+                --stack-offcanvas-menu-link-color: #{$warning};
+            }
+        }
+    }
+
+    &__slider{
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        /* width */
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .slider-item{
+            height: var(--stack-offcanvas-slider-item-height, 65vh);
+        }
+    }
+}
+
+@keyframes LinkSlide{
+    0% { 
+        opacity:0; 
+        transform: translateX(-50px);
+    }
+    100% { 
+        opacity:1; 
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes LinkSlide{
+    0% { 
+        opacity:0; 
+        transform: translateX(-50px);
+    }
+    100% { 
+        opacity:1; 
+        transform: translateX(0px);
+    }
+}

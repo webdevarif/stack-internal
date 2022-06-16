@@ -1,0 +1,71 @@
+.pagination-default {
+    gap: 0.5rem;
+
+    .page-link {
+        border: 0px;
+        color: $gray-800;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+
+        &.active{
+            background-color: $gray-100;
+        }
+    }
+
+    .page-item.disabled .page-link{
+        color: $gray-300;
+    }
+}
+
+.pagination-arrow{
+    display: flex;
+    gap: var(--pagination-arrow-gap, 0);
+    align-items: center;
+    z-index: 9;
+
+    @include media-breakpoint-up(xl){
+        --pagination-arrow-size: 40px;
+    }
+
+    svg{
+        min-width: var(--pagination-arrow-size, 40px);
+        height: var(--pagination-arrow-size, 40px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            color: $white;
+            fill: $warning;
+
+            circle{
+                color: transparent;
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet{
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
+    --swiper-pagination-bullet-inactive-color: transparent;
+    border: 1px solid $white;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    --swiper-pagination-color: transparent;
+    position: relative;
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+}

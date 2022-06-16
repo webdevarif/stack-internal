@@ -1,0 +1,27 @@
+.list{
+
+    &-disc{
+        list-style: none;
+        padding: 0;
+
+
+        li{
+            position: relative;
+            padding-left: 30px;
+
+            &:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 8px;
+                width: var(--dics-size, 13px);
+                height: var(--dics-size, 13px);
+                background-color: var(--dics-bg, $primary);
+                border-radius: 50%;
+                display: inline-block;
+
+
+            }
+        }
+    }
+}

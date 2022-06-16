@@ -1,0 +1,13 @@
+.arrow-icon{
+    border: 1px solid $border-color;
+    color: $text-muted;
+    padding: 0.35rem 0.65rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+
+    
+    &:hover{
+        color: $gray-800;
+    }
+}
